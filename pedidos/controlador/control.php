@@ -20,7 +20,7 @@ if (isset($_GET["accion"])) {
                 $vista="nuevoproducto.php";
                 break;
             
-            case 'pedido':
+            case 'pedidos':
                 $vista="pedidos.php";
                 break;
 
