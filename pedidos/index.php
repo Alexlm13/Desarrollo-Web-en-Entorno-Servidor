@@ -1,6 +1,5 @@
 <?php
 
-
 include('.//controlador//control.php');
 
 ?>
@@ -15,7 +14,8 @@ include('.//controlador//control.php');
 </head>
 <body>
     <div>
-        <?php include("./vistas/$vista"); ?>
+        <?php include("./vistas/menu.html"); ?>
+        <?php require("./vistas/$vista"); ?>
     </div>
 </body>
 </html>
