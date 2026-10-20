@@ -11,7 +11,7 @@ function leerProductos($ruta){
 
     foreach($ficheros as $fichero){
         if($fichero!="." && $fichero!=".."){
-            $producos=leerProducto($fichero);
+            $producto=leerProducto($fichero);
             array_push($productos, $producto);
         }
     }

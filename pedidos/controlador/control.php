@@ -21,7 +21,7 @@ if (isset($_GET["accion"])) {
             case 'productos':
                 $vista="productos.php";
                 $productos=leerProductos("./datos/productos");
-
+                $categoria=leerIni("./datos/categorias/categorias.ini");
                 break;
 
             case 'nuevoproducto':

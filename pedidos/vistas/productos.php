@@ -26,11 +26,11 @@
                         <?php for($i=0;$i<count($productos);$i++) :?>
                         <tr>
                             <td><?php echo $productos[$i]["nombre"]?></td>
-                            <td><?php echo $productos[$i]["Precio"]?></td>
+                            <td><?php echo $productos[$i]["precio"]?></td>
                             <td>
                                 <?php
                                     $indice=$productos[$i]["idCategoria"];
-                                    $nombre=$categorias[$indice];
+                                    $nombre=$categoria[$indice];
                                     echo $nombre;
                                 
                                 ?>
