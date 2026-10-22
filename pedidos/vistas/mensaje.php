@@ -1,4 +1,5 @@
-<div class="alert alert-success alert-<?php echo $color?> fade show" role="alert">
+<div class="alert alert-<?php echo $color?> alert-dissmissible fade show" role="alert">
+    <?php echo $mensaje ?>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
     </button>
 </div>

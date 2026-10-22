@@ -5,15 +5,19 @@
     </div>
     <div id="vistas">
         <h3>[Nuevo Pedido]</h3>
+        <hr />
         <form>
             <div class="form-group mt-3">
                 <label for="fecha">Fecha</label>
-                <input type="date" class="form-control" name="fecha" id="fecha" value="2026-10-19">
+                <input type="date" class="form-control" name="fecha" id="fecha" value="<?php echo date("d M Y")?>">
             </div>
             <div class="form-group mt-3">
                 <label for="cliente">Cliente</label>
                 <select class="form-control" id="cliente" name="cliente">
-
+                    <?php foreach ($clientes as $clave=>$valor):?>
+                        <option value="<?php echo $clave?>"></option>
+                            <?php echo $valor?>
+                    <?php endforeach;?>
                 </select>
             </div>
             <button class="btn btn-primary mt-3" type="submit" name="accion" value="detallepedido">Continuar</button>
