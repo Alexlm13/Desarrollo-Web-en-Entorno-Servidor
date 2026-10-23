@@ -5,8 +5,8 @@
     </div>
     <div id="vistas">
         <h3>[Nuevo Producto]</h3>
-        <hr />
         <form>
+
             <div class="form-group  mt-3">
                 <label for="nombre">Nombre</label>
                 <input type="text" class="form-control" name="nombre" id="nombre" placeholder="nombre">
@@ -18,12 +18,12 @@
             <div class="form-group mt-3">
                 <label for="categoria">Categoría</label>
                 <select class="form-control" id="categoria" name="categoria">
-                    <option value="1">
-                        Electrodomésticos</option>
-                    <option value="2">
-                        Ordenadores </option>
-                    <option value="3">
-                        Televisores </option>
+                    <?php foreach ($categorias as $clave=>$valor):?>
+                        <option value="<?php echo $clave?>">
+                            <?php echo $valor?>
+                        </option>
+
+                    <?php endforeach;?>
                 </select>
             </div>
             <button class="btn btn-primary mt-3" type="submit" name="accion" value="guardarproducto">Guardar</button>

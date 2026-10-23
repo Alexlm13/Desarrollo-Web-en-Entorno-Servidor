@@ -10,6 +10,7 @@
                 <button class="btn btn-primary" type="submit" name="accion" value="nuevocliente">Nuevo Cliente</button>
             </form>
             <div>
+
                 <table class="table mt-3 table-striped thead-dark">
                     <thead class="thead-dark">
                         <tr>
@@ -19,28 +20,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php  foreach($clientes as $clave=>$valor):?>
-                        <tr>
-                            <td><?php echo $clave?></td>
-                            <td><?php echo $valor?></td>
-                            <td>
-                                <form>
-                                    <button class="btn btn-primary" type="submit" name="accion" value="editarcliente">
-                                        Editar
-                                    </button>
-                                    <input type="hidden" name="id" value="<?php echo $clave ?>" />
-                                </form>
-                            </td>
-                            <td>
-                                <form onsubmit="return confirm('El cliente va a ser eliminado, ¿Está seguro?')">
-                                    <button class="btn btn-primary" type="submit" name="accion" value="eliminarcliente">
-                                        Eliminar
-                                    </button>
-                                    <input type="hidden" name="id" value="<?php echo $clave ?>" />
-                                </form>
-                            </td>
-                        </tr>
-                        <?php endforeach ;?>
+                        <?php foreach ($clientes as $clave => $valor): ?>
+                            <tr>
+                                <td><?php echo $clave ?></td>
+                                <td><?php echo $valor ?></td>
+                                <td>
+                                    <form action="">
+                                        <button class="btn btn-primary" type="submit" name="accion" value="editarcliente">
+                                            Editar
+                                        </button>
+                                        <input type="hidden" name="id" value="<?php echo $clave ?>">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form onsubmit="return confirm('El cliente va a ser eliminado, ¿desea continuar?')">
+                                        <button class="btn btn-primary" type="submit" name="accion" value="eliminarcliente">
+                                            Eliminar
+                                        </button>
+                                        <input type="hidden" name="id" value="<?php echo $clave ?>">
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
