@@ -1,4 +1,5 @@
 <?php
+session_start();
 require ('./modelo/funciones.php');
 $vista="clientes.php";
 
@@ -34,6 +35,10 @@ if (isset($_GET["accion"])) {
 
             case 'nuevopedido':
                 $vista="nuevopedido.php";
+                break;
+
+            case 'detallepedido':
+                $vista="detallepedido.php";
                 break;
         }
     }

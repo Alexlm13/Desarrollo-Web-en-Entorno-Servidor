@@ -20,7 +20,7 @@ require_once('.//controller//bloc.php');
         <?php include ('./vistas/menu.html'); ?>
         <?php require ('./vistas/alertas.php'); ?>
         <?php require ("./vistas/$vista"); ?>
-        <?php include ('./vistas/pie.hmtl') ?>
+        <?php include ('./vistas/pie.html') ?>
     </div>
 </body>
 

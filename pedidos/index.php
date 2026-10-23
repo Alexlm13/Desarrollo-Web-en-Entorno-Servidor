@@ -13,8 +13,10 @@ include('.//controlador//control.php');
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <?php include("./vistas/menu.html"); ?>
+    <?php include("./vistas/menu.html"); ?>
+    <main class="container mt-3">
+    <!-- Los posibles mensajes -->
+    <div class="mt-3">
         <?php require("./vistas/$vista"); ?>
     </div>
 </body>
