@@ -16,7 +16,8 @@ require('./controlador/control.php');
 </head>
 
 <body>
-    <?php include("./vistas/menu.html"); ?>
+    <?php 
+        include("./vistas/menu.html"); ?>
     <main class="container mt-3">
     <!-- Los posibles mensajes -->
     <div class="mt-3">

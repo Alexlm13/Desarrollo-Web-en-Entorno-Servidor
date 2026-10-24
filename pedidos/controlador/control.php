@@ -1,11 +1,7 @@
 <?php
 session_start();
-<<<<<<< HEAD
-require ('./modelo/funciones.php');
-=======
 require('./modelo/funciones.php');
 
->>>>>>> ea4f1bf541ee0835f2220f8d4b4e423849191fa6
 $vista="clientes.php";
 define("PRO","./datos/productos/");
 define("CLI", "./datos/clientes/");
@@ -76,24 +72,6 @@ if(isset($_GET['accion'])){
             }
             break;
 
-<<<<<<< HEAD
-            case 'nuevoproducto':
-                $vista="nuevoproducto.php";
-                break;
-            
-            case 'pedidos':
-                $vista="pedidos.php";
-                break;
-
-            case 'nuevopedido':
-                $vista="nuevopedido.php";
-                break;
-
-            case 'detallepedido':
-                $vista="detallepedido.php";
-                break;
-        }
-=======
         case 'eliminarproducto':
             $ruta=PRO.$_GET['fichero'].".txt";
             $ok=unlink($ruta);
@@ -109,6 +87,5 @@ if(isset($_GET['accion'])){
             $categorias=leerIni(CAT.'categorias.ini');
             $productos=leerProductos(PRO);
             break;
->>>>>>> ea4f1bf541ee0835f2220f8d4b4e423849191fa6
     }
 }
