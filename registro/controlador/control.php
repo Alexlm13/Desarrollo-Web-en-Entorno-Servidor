@@ -8,9 +8,8 @@ $vista = "inicio.php";
 
 if (isset($_GET['accion'])) {
 
-    
-
     switch ($_GET['accion']) {
+
         case 'acceso':
             $login = $_GET["login"];
             $clave = existe($login, USU."usuarios.ini");
@@ -77,5 +76,15 @@ if (isset($_GET['accion'])) {
             $color="success";
             $vista="inicio.php";
             break;
+
+        case 'recibidos':
+            $recibidos=verContenido(USU,$_SESSION['usuario'],"recibidos");
+            $vista="recibidos.php";
+            break;
+
+        case 'leer':
+            $ruta=USU.$_SESSION['usuario']."/recibidos/".$_GET['fichero'];
+
+        break;
     }
 }

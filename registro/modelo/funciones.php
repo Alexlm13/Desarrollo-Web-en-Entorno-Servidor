@@ -36,4 +36,24 @@ function crearDirectorios($login){
     return mkdir("$directorio/recibidos", 0777, true) && mkdir("$directorio/enviados", 0777, true);
 }
 
+function verContenido($ruta,$login, $directorio){
+    $ficheros=scandir($ruta.$login."/".$directorio);
+    $mensajes=[];
+
+    if ($ficheros==false) {
+        return $mensajes;
+    }
+
+    foreach ($ficheros as $fichero) {
+        if ($fichero!== "." && $fichero !== "..") {
+            $mensajes[]=$fichero;
+        }
+    }
+    return $mensajes;
+}
+
+function leerContenido($ruta){
+    return $texto=file_get_contents($ruta);
+}
+
 ?>
