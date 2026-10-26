@@ -1,15 +1,14 @@
-<form>
-    <div style="text-align: center;">
+<div style="text-align:center; padding-bottom:10px">
+    <div>
         <h4>Bienvenido, <?php echo $_SESSION['usuario'] ?></h4>
         <div>
-            <?php foreach ($recibidos as $fichero):?>
-                <div>
-                    <?php echo $fichero?>
-                    <button type="submit" name="fichero" value="<?php echo $fichero?>" style="margin-left: 100px; margin-bottom:50px">Leer</button>
-                </div>
-                <input type="hidden" name="accion" value="leer">
-            <?php endforeach;?>
+            <?php foreach ($recibidos as $fichero): ?>
+                <form>
+                    <?php echo $fichero ?>
+                    <button type="submit" name="accion" value="leerRecibidos" style="margin-left: 50px; margin-bottom:10px">Leer</button>
+                    <input type="hidden" name="fichero" value="<?php echo $fichero ?>">
+                </form>
+            <?php endforeach; ?>
         </div>
-        
     </div>
-</form>
+</div>

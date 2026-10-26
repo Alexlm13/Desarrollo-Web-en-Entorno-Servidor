@@ -82,10 +82,39 @@ if (isset($_GET['accion'])) {
             $vista="recibidos.php";
             break;
 
-        case 'leer':
+        case 'leerRecibidos':
             $ruta=USU.$_SESSION['usuario']."/recibidos/".$_GET['fichero'];
-            leerContenido($ruta);
+            $contenido=leerContenido($ruta);
+            
+            if ($contenido===null) {
+                $mensaje="El mensaje no ha podido ser leído.";
+                $color="danger";
+                $recibidos=verContenido(USU,$_SESSION['usuario'],"recibidos");
+                $vista="recibidos.php";
+            }else{
+                $vista="leer.php";
+            }
+            
+            break;
 
-        break;
+        case 'enviados':
+            $enviados=verContenido(USU,$_SESSION['usuario'],"enviados");
+            $vista="enviados.php";
+            break;
+
+        case 'leerEnviados':
+            $ruta=USU.$_SESSION['usuario']."/enviados/".$_GET['fichero'];
+            $contenido=leerContenido($ruta);
+            
+            if ($contenido===null) {
+                $mensaje="El mensaje no ha podido ser leído.";
+                $color="danger";
+                $enviados=verContenido(USU,$_SESSION['usuario'],"enviados");
+                $vista="enviados.php";
+            }else{
+                $vista="leer.php";
+            }
+            
+            break;
     }
 }

@@ -53,7 +53,14 @@ function verContenido($ruta,$login, $directorio){
 }
 
 function leerContenido($ruta){
-    return $texto=file_get_contents($ruta);
+    $texto=file_get_contents($ruta);
+
+    if ($texto===false) {
+        return null;
+    }
+
+    return explode(PHP_EOL, $texto, 3);
+
 }
 
 ?>
