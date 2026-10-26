@@ -84,6 +84,7 @@ if (isset($_GET['accion'])) {
 
         case 'leer':
             $ruta=USU.$_SESSION['usuario']."/recibidos/".$_GET['fichero'];
+            leerContenido($ruta);
 
         break;
     }
