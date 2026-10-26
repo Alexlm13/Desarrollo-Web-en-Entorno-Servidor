@@ -5,7 +5,7 @@
     <p><b>Asunto:</b> <?php echo $contenido[1] ?></p>
 
     <div>
-        <?php foreach (explode(PHP_EOL, $contenido[2]) as $linea): ?>
+        <?php foreach (explode("\n", $contenido[2]) as $linea): ?>
             <?php echo $linea ?><br>
         <?php endforeach; ?>
     </div>

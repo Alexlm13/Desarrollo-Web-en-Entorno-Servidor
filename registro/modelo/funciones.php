@@ -59,8 +59,40 @@ function leerContenido($ruta){
         return null;
     }
 
-    return explode(PHP_EOL, $texto, 3);
+    $partes=explode("\n", $texto, 3);
+    $partes[0]=trim($partes[0]);
+    $partes[1]=trim($partes[1]);
 
+    return $partes;
+
+}
+
+function listaUsuarios($ruta){
+    $usuarios=parse_ini_file($ruta);
+    $logins=[];
+
+    if ($usuarios===false){
+        return $logins;
+    }
+
+    foreach ($usuarios as $login=>$clave){
+        $logins[]=$login;
+    }
+
+    return $logins;
+}
+
+
+function guardarMensaje($ruta, $persona, $asunto, $contenido){
+    $ok=false;
+    $fichero=fopen($ruta, "w"); // "w" crea el fichero y lo escribe desde cero
+
+    if ($fichero) {
+        $texto=$persona.PHP_EOL.$asunto.PHP_EOL.$contenido;
+        $ok=fwrite($fichero, $texto);
+        fclose($fichero);
+    }
+    return $ok;
 }
 
 ?>

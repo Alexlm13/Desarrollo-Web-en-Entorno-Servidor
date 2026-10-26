@@ -16,7 +16,7 @@ require("./controlador/control.php");
 </head>
 
 <body>
-    <div style="padding-left: 750px; padding-right:750px">
+    <div class="mx-auto" style="max-width: 500px">
         <?php
         if (isset($mensaje)) {
             include("./vistas/mensaje.php");
