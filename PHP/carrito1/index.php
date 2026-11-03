@@ -39,10 +39,6 @@ if (isset($_GET["accion"])) {
 
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
