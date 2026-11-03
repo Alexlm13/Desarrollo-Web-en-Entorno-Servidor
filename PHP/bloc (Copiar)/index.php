@@ -1,0 +1,39 @@
+<?php
+include('.//controller//autenticacion.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <?php if (isset($mensaje) && isset($tipo)): ?>
+                <div class="alert alert-dismissible alert-<?php echo $tipo ?>" role="alert">
+                    <?php echo $mensaje; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif ?>
+
+            <label>Login</label>
+            <input type="text" name="login">
+
+            <label>Clave</label>
+            <input type="password" name="clave">
+
+            <button type="submit" name="accion" value="acceso">Acceder</button>
+            <button type="submit" name="accion" value="registro">Regístrate</button>
+
+        </div>
+    </form>
+</body>
+
+</html>

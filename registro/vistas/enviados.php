@@ -5,7 +5,7 @@
             <?php foreach ($enviados as $fichero):?>
                 <form>
                     <?php echo $fichero?>
-                    <button type="submit" name="accion" value="leerEnviados" style="margin-left: 100px; margin-bottom:50px">Leer</button>
+                    <button type="submit" name="accion" value="leerEnviados">Leer</button>
                     <input type="hidden" name="fichero" value="<?php echo $fichero?>">
                 </form>
             <?php endforeach;?>
