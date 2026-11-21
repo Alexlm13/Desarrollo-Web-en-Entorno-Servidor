@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
+require ("./controlador/control");
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
+    <title>Document</title>
 </head>
-
 <body>
-    <h3>HOLA HTML</h3>
-    <h5>Esto es código PHP:
-        <?php echo "Hola mundo" ?>
-    </h5>
-        
-</body>
+    <?php
+    
+        include("./vistas/$vista");
 
+    ?>
+</body>
 </html>
