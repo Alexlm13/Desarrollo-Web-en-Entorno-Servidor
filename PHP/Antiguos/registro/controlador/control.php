@@ -128,7 +128,7 @@ if (isset($_GET['accion'])) {
             $asunto = $_GET['asunto'];
             $contenido = $_GET['contenido'];
 
-            $nombre = time() . "-" . $asunto;
+            $nombre = date("dmY_His") . "-" . $asunto;
             $rutaEnviado = USU . $_SESSION['usuario'] . "/enviados/" . $nombre;
             $rutaRecibido = USU . $destinatario . "/recibidos/" . $nombre;
 
