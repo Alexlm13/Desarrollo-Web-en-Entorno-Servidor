@@ -119,6 +119,7 @@ if (isset($_GET['accion'])) {
 
         case "redactar":
             $usuarios = listaUsuarios(USU . "usuarios.ini");
+            $usuarios = array_diff($usuarios, [$_SESSION['usuario']]);
             $vista = "redactar.php";
             break;
 
